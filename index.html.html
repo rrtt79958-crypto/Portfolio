@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prithiviraj | Creative Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.05);
+    z-index: 1000;
+}
+
+nav h1 {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00f5ff;
+}
+
+section {
+    min-height: 100vh;
+    padding: 120px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h2 {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.hero span {
+    color: #00f5ff;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+    max-width: 500px;
+    opacity: 0.8;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: #00f5ff;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(0, 245, 255, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #00f5ff;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>PR</h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Hi, I'm <span>Prithiviraj</span></h2>
+    <p>Creative Developer & Tech Content Creator from Chennai. I build modern websites and engaging digital experiences.</p>
+    <a href="#projects" class="btn">View My Work</a>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p style="margin-top:20px; max-width:700px;">
+        I am passionate about web development, AI tools, and creating tech content. I love designing futuristic UI with smooth interactions and clean code.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="cards" style="margin-top:40px;">
+        <div class="card">
+            <h3>AI Video Generator</h3>
+            <p>Created automated tech videos using AI prompts and cinematic scripting techniques.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cyber Safety Awareness</h3>
+            <p>Produced Tamil tech content educating people about online security and digital privacy.</p>
+        </div>
+
+        <div class="card">
+            <h3>Modern Web Apps</h3>
+            <p>Developed responsive and interactive web applications with smooth UI animations.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button class="btn">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Prithiviraj | Designed with Creativity
+</footer>
+
+<script>
+function sendMessage(e) {
+    e.preventDefault();
+    alert("Message sent successfully! (Demo Only)");
+}
+</script>
+
+</body>
+</html>
